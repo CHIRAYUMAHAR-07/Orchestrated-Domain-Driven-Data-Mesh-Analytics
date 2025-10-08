@@ -1,0 +1,166 @@
+﻿Active code page: 65001
+
+C:\Users\Chirayu Mahar\data_mesh_analytics_app>"C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Scripts\activate.bat"
+
+(venv) C:\Users\Chirayu Mahar\data_mesh_analytics_app>pip install streamlit pandas plotly openpyxl
+Requirement already satisfied: streamlit in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (1.50.0)
+Requirement already satisfied: pandas in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (2.3.3)
+Requirement already satisfied: plotly in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (6.3.1)
+Collecting openpyxl
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: altair!=5.4.0,!=5.4.1,<6,>=4.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (5.5.0)
+Requirement already satisfied: blinker<2,>=1.5.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (1.9.0)
+Requirement already satisfied: cachetools<7,>=4.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (6.2.0)
+Requirement already satisfied: click<9,>=7.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (8.3.0)
+Requirement already satisfied: numpy<3,>=1.23 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (2.3.3)
+Requirement already satisfied: packaging<26,>=20 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (25.0)
+Requirement already satisfied: pillow<12,>=7.1.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (11.3.0)
+Requirement already satisfied: protobuf<7,>=3.20 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (6.32.1)
+Requirement already satisfied: pyarrow>=7.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (21.0.0)   
+Requirement already satisfied: requests<3,>=2.27 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (2.32.5)
+Requirement already satisfied: tenacity<10,>=8.1.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (9.1.2)
+Requirement already satisfied: toml<2,>=0.10.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (0.10.2)
+Requirement already satisfied: typing-extensions<5,>=4.4.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (4.15.0)
+Requirement already satisfied: watchdog<7,>=2.1.5 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (6.0.0)
+Requirement already satisfied: gitpython!=3.1.19,<4,>=3.0.7 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (3.1.45)
+Requirement already satisfied: pydeck<1,>=0.8.0b4 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (0.9.1)
+Requirement already satisfied: tornado!=6.5.0,<7,>=6.0.3 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from streamlit) (6.5.2)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from pandas) (2025.2)    
+Requirement already satisfied: narwhals>=1.15.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from plotly) (2.7.0)
+Collecting et-xmlfile (from openpyxl)
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Requirement already satisfied: jinja2 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (3.1.6)
+Requirement already satisfied: jsonschema>=3.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (4.25.1)
+Requirement already satisfied: colorama in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from click<9,>=7.0->streamlit) (0.4.6)
+Requirement already satisfied: gitdb<5,>=4.0.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from gitpython!=3.1.19,<4,>=3.0.7->streamlit) (4.0.12)
+Requirement already satisfied: six>=1.5 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.4.3)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from requests<3,>=2.27->streamlit) (2025.10.5)
+Requirement already satisfied: smmap<6,>=3.0.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit) (5.0.2)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from jinja2->altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (3.0.3)
+Requirement already satisfied: attrs>=22.2.0 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (25.4.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (2025.9.1)
+Requirement already satisfied: referencing>=0.28.4 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (0.36.2)
+Requirement already satisfied: rpds-py>=0.7.1 in c:\users\chirayu mahar\data_mesh_analytics_app\venv\lib\site-packages (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<6,>=4.0->streamlit) (0.27.1)
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.9/250.9 kB 513.2 kB/s eta 0:00:00
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Installing collected packages: et-xmlfile, openpyxl
+Successfully installed et-xmlfile-2.0.0 openpyxl-3.1.5
+
+[notice] A new release of pip is available: 24.0 -> 25.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) C:\Users\Chirayu Mahar\data_mesh_analytics_app>streamlit run app.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8505
+  Network URL: http://10.60.57.44:8505
+
+2025-10-08 15:36:15.724 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:36:15.741 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\table.pxi", line 4795, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 637, in dataframe_to_arrays        
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 625, in convert_column
+    raise e
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 619, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\array.pxi", line 365, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column StockCode with type object')
+2025-10-08 15:36:15.773 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:36:16.204 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:36:16.204 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\table.pxi", line 4795, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 637, in dataframe_to_arrays        
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 625, in convert_column
+    raise e
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 619, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\array.pxi", line 365, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column StockCode with type object')
+2025-10-08 15:39:15.477 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:39:15.480 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\table.pxi", line 4795, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 637, in dataframe_to_arrays        
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 625, in convert_column
+    raise e
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 619, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\array.pxi", line 365, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column StockCode with type object')
+2025-10-08 15:39:15.486 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:39:15.856 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2025-10-08 15:39:15.857 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\table.pxi", line 4795, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 637, in dataframe_to_arrays        
+    arrays = [convert_column(c, f)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 625, in convert_column
+    raise e
+  File "C:\Users\Chirayu Mahar\data_mesh_analytics_app\venv\Lib\site-packages\pyarrow\pandas_compat.py", line 619, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow\\array.pxi", line 365, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 91, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowTypeError: ("Expected bytes, got a 'int' object", 'Conversion failed for column StockCode with type object')
