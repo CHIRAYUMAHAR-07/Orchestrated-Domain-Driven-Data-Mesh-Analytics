@@ -62,7 +62,7 @@ def dq_report(df, key_cols):\
     tot = df.count()\
     dedup = df.dropDuplicates(key_cols).count()\
     dup_rate = (tot - dedup) / max(1, tot)\
-    return tot, dedup, dup_rate\
+    return tot, dedup, dup_rate
 
 
 Profiling with YData-Profiling : 
@@ -70,4 +70,29 @@ Profiling with YData-Profiling :
 from ydata_profiling import ProfileReport\
 df = spark.read.format("delta").load("/tmp/delta_data_mesh/customers").limit(10000).toPandas()\
 profile = ProfileReport(df, title="Customers Profile", explorative=True)\
-profile.to_file("/tmp/customers_profile_report.html")\
+profile.to_file("/tmp/customers_profile_report.html")
+
+
+# Analytics & Visualizations
+Customer Lifetime Value (LTV)
+
+ltv = spark_sales.groupBy("customer_id").agg(\
+    F.sum("total_price").alias("ltv"),\
+    F.count("*").alias("purchase_count")\
+)
+
+Product Price Distribution:
+fig = px.histogram(products, x='price', nbins=50, title='Product Price Distribution')
+
+# Real-Time Streaming Simulation
+Socket Server
+
+def start_socket_server(...): \ 
+    # Emits synthetic events with customer_id, product_id, quantity, unit_price\
+
+Spark Structured Streaming
+
+socket_df = spark.readStream.format("socket").option("host", "127.0.0.1").option("port", 9998).load()\
+json_df = socket_df.select(F.from_json(F.col("value"), schema).alias("data")).select("data.*")\
+
+
