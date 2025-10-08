@@ -22,6 +22,7 @@ pyspark==3.5.0, delta-spark==3.1.0 for Delta Lake integration
 faker, plotly, seaborn, matplotlib, fastapi, uvicorn, scikit-learn, pandas-profiling, ydata-profiling for analytics and simulation
 
 Delta Lake is configured via:
+
 builder = SparkSession.builder \
     .appName("DeltaLake-Colab") \
     .master("local[*]") \
