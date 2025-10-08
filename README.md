@@ -46,3 +46,28 @@ Price distribution: Normal(120, 60) + 5
 Sales
 120,000 transactions
 Attributes: transaction_id, customer_id, product_id, quantity, unit_price, total_price, ts
+
+Finance
+50,000 entries
+
+Attributes: entry_id, date, amount, type, note
+All datasets are saved as .parquet and written to Delta Lake.
+
+# Data Quality & Profiling
+Deduplication Report
+
+Using PySpark:
+
+def dq_report(df, key_cols):
+    tot = df.count()
+    dedup = df.dropDuplicates(key_cols).count()
+    dup_rate = (tot - dedup) / max(1, tot)
+    return tot, dedup, dup_rate
+
+
+Profiling with YData-Profiling : 
+
+from ydata_profiling import ProfileReport
+df = spark.read.format("delta").load("/tmp/delta_data_mesh/customers").limit(10000).toPandas()
+profile = ProfileReport(df, title="Customers Profile", explorative=True)
+profile.to_file("/tmp/customers_profile_report.html")
