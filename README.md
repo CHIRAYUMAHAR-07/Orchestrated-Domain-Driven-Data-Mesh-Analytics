@@ -58,16 +58,16 @@ Deduplication Report
 
 Using PySpark:
 
-def dq_report(df, key_cols):
-    tot = df.count()
-    dedup = df.dropDuplicates(key_cols).count()
-    dup_rate = (tot - dedup) / max(1, tot)
-    return tot, dedup, dup_rate
+def dq_report(df, key_cols):\
+    tot = df.count()\
+    dedup = df.dropDuplicates(key_cols).count()\
+    dup_rate = (tot - dedup) / max(1, tot)\
+    return tot, dedup, dup_rate\
 
 
 Profiling with YData-Profiling : 
 
-from ydata_profiling import ProfileReport
-df = spark.read.format("delta").load("/tmp/delta_data_mesh/customers").limit(10000).toPandas()
-profile = ProfileReport(df, title="Customers Profile", explorative=True)
-profile.to_file("/tmp/customers_profile_report.html")
+from ydata_profiling import ProfileReport\
+df = spark.read.format("delta").load("/tmp/delta_data_mesh/customers").limit(10000).toPandas()\
+profile = ProfileReport(df, title="Customers Profile", explorative=True)\
+profile.to_file("/tmp/customers_profile_report.html")\
