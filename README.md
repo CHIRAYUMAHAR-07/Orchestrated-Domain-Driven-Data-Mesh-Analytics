@@ -29,3 +29,20 @@ builder = SparkSession.builder \
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
 spark = configure_spark_with_delta_pip(builder).getOrCreate()
+
+
+# Data Simulation
+Customers
+5,000 synthetic profiles
+
+Attributes: customer_id, name, email, country, segment, signup_date, is_active
+Segments: consumer, small_business, enterprise
+
+Products
+800 products across 5 categories: software, hardware, subscription, service, accessory
+
+Price distribution: Normal(120, 60) + 5
+
+Sales
+120,000 transactions
+Attributes: transaction_id, customer_id, product_id, quantity, unit_price, total_price, ts
