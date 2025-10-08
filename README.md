@@ -14,20 +14,17 @@ Sales: Timestamped transactions with quantity, unit price, and total price
 Finance: Revenue and expense entries with notes and timestamps
 Each domain is simulated using Python and Faker, stored in Delta Lake tables, and analyzed using PySpark, Plotly, and Power BI.
 
-├── notebooks/
-│   ├── orchestrated_data_mesh.ipynb        # Main Colab notebook
-│   ├── customer360_streaming.ipynb         # Real-time socket + Delta streaming
-│   └── profiling_and_eda.ipynb             # YData-Profiling integration
-├── dashboards/
-│   └── powerbi_dashboard.pbix              # Interactive Power BI dashboard
-├── data/
-│   ├── customers.parquet
-│   ├── products.parquet
-│   ├── sales.parquet
-│   └── finance.parquet
-├── delta/
-│   └── curated Delta tables for each domain
-├── visuals/
-│   └── Plotly charts and saved images
-├── README.md                               # This file
+# Environment Setup
+The notebook installs and configures:
 
+openjdk-11-jdk-headless for Spark
+pyspark==3.5.0, delta-spark==3.1.0 for Delta Lake integration
+faker, plotly, seaborn, matplotlib, fastapi, uvicorn, scikit-learn, pandas-profiling, ydata-profiling for analytics and simulation
+
+Delta Lake is configured via:
+builder = SparkSession.builder \
+    .appName("DeltaLake-Colab") \
+    .master("local[*]") \
+    .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
+    .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
+spark = configure_spark_with_delta_pip(builder).getOrCreate()
